@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.CadAutorController">
    <children>
-      <TabPane layoutX="10.0" layoutY="14.0" prefHeight="526.0" prefWidth="390.0" style="-fx-background-color: #D7D2C9;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="20.0" tabMinWidth="100.0">
+      <TabPane layoutX="10.0" layoutY="14.0" prefHeight="526.0" prefWidth="390.0" style="-fx-background-color: #D7D2C9;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="20.0" tabMinWidth="100.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
         <tabs>
           <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Reportar problema">
             <content>
@@ -27,7 +27,7 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
-                        <ComboBox layoutX="15.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Selecione o tipo" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-border-radius: 5;">
+                        <ComboBox layoutX="15.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Selecione o tipo" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="37.0">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
                                     <String fx:value="Aplicativo travando" />
@@ -38,18 +38,18 @@
                               </FXCollections>
                            </items>
                         </ComboBox>
-                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Categoria do problema" textFill="#7a6d66">
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Categoria do problema" textFill="#7a6d66" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="15.0" layoutY="72.0" prefHeight="19.0" prefWidth="360.0" text="Detalhes do ocorrido" textFill="#7a6d66">
+                        <Label layoutX="15.0" layoutY="72.0" prefHeight="19.0" prefWidth="360.0" text="Detalhes do ocorrido" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="72.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextArea layoutX="15.0" layoutY="96.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva detalhadamente o problema que você deseja reportar." style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #D7D2C9;" wrapText="true" />
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Reportar" textFill="WHITE">
+                        <TextArea layoutX="15.0" layoutY="96.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva detalhadamente o problema que você deseja reportar." style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #D7D2C9;" wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="96.0" />
+                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Reportar" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -78,8 +78,8 @@
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <TextArea layoutX="13.0" layoutY="111.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva sua ideia para que possamos melhorar." style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" />
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar sugestão">
+                        <TextArea layoutX="13.0" layoutY="111.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva sua ideia para que possamos melhorar." style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="111.0" />
+                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar sugestão" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -92,17 +92,17 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
                      <children>
-                        <Slider layoutX="14.0" layoutY="97.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+                        <Slider layoutX="14.0" layoutY="97.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="97.0" />
                         <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome do motorista" textFill="#7a6d66">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <TextField layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" />
+                        <TextField layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="37.0" />
                         <Label layoutX="14.0" layoutY="72.0" prefHeight="20.0" prefWidth="360.0" text="Que nota você dá?" textFill="#7a6d66">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar avaliação">
+                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar avaliação" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
