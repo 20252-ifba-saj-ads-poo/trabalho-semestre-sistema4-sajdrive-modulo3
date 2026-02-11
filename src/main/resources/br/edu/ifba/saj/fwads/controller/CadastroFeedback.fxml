@@ -3,12 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -24,53 +25,40 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome do problema" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome da categoria" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="15.0" layoutY="36.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Tela em branco" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
-                        <Label layoutX="15.0" layoutY="72.0" prefHeight="19.0" prefWidth="360.0" text="Descrição do problema" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="72.0">
+                        <ComboBox layoutX="15.0" layoutY="96.0" prefHeight="26.0" prefWidth="360.0" promptText="Selecione a gravidade" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-background-radius: 3; -fx-border-radius: 3;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="96.0" />
+                        <TextField layoutX="15.0" layoutY="36.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Ar-condicionado quebrado" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <Label layoutX="15.0" layoutY="72.0" prefHeight="19.0" prefWidth="360.0" text="Prioridade padrão" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="72.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextArea layoutX="15.0" layoutY="96.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva detalhadamente o que significa esse tipo de problema." style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #D7D2C9;" wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="96.0" />
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Cadastrar" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Salvar categoria" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
+                        <CheckBox layoutX="15.0" layoutY="137.0" mnemonicParsing="false" style="-fx-text-fill: #7A6D66; -fx-font-weight: bold; -fx-cursor: hand;" text="Exige identificação do veículo?" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="137.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastrar sugestão">
+          <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Sugestões recebidas">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
                      <children>
-                        <Label layoutX="15.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="A sugestão é sobre:" textFill="#7a6d66">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font></Label>
-                        <RadioButton layoutX="13.0" layoutY="37.0" mnemonicParsing="false" text="Aplicativo" textFill="#7a6d66">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor></RadioButton>
-                        <RadioButton layoutX="13.0" layoutY="60.0" mnemonicParsing="false" text="Transporte" textFill="#7a6d66">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor></RadioButton>
-                        <Label layoutX="13.0" layoutY="86.0" prefHeight="20.0" prefWidth="360.0" text="Detalhes da sugestão" textFill="#7a6d66">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font></Label>
-                        <TextArea layoutX="13.0" layoutY="111.0" prefHeight="260.0" prefWidth="360.0" promptText="Descreva sua ideia para que possamos melhorar." style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" />
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar sugestão">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
+                        <TableView layoutX="10.0" layoutY="14.0" prefHeight="470.0" prefWidth="370.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                          <columns>
+                            <TableColumn prefWidth="46.40002250671387" text="ID" />
+                            <TableColumn prefWidth="88.00000762939453" text="Tipo" />
+                              <TableColumn prefWidth="76.79998779296875" text="Veículo" />
+                              <TableColumn prefWidth="147.0" text="Texto da sugestão" />
+                          </columns>
+                        </TableView>
                      </children>
                   </AnchorPane>
             </content>
@@ -79,17 +67,20 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
                      <children>
-                        <Slider layoutX="15.0" layoutY="208.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="208.0" />
-                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome completo" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <TextField layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="37.0" />
-                        <Label layoutX="15.0" layoutY="183.0" prefHeight="20.0" prefWidth="360.0" text="Score" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="183.0">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font></Label>
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Cadastrar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                        <TextField layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <TableView layoutX="15.0" layoutY="193.0" prefHeight="257.0" prefWidth="360.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                          <columns>
+                            <TableColumn prefWidth="47.20001029968262" text="ID" />
+                            <TableColumn prefWidth="92.79999542236328" text="Nome" />
+                              <TableColumn prefWidth="85.5999755859375" text="Matrícula" />
+                              <TableColumn prefWidth="132.00006103515625" text="Veículo" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Salvar motorista" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -99,13 +90,13 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="94.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="94.0" />
+                        <TextField layoutX="15.2" layoutY="91.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 12345" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0" />
                         <Label layoutX="14.0" layoutY="126.0" prefHeight="20.0" prefWidth="360.0" text="Placa do veículo utilizado" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="126.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="151.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="151.0" />
+                        <TextField layoutX="14.0" layoutY="151.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: ABC-1234" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="151.0" />
                      </children>
                   </AnchorPane>
                </content>
