@@ -6,14 +6,14 @@ public class Veiculo {
     private String placa;
     private int frota;
 
-    public Veiculo (String modelo, int ano, String placa, int frota) {
+    public Veiculo(String modelo, int ano, String placa, int frota) {
         this.modelo = modelo;
         this.ano = ano;
         this.placa = placa;
         this.frota = frota;
     }
 
-    public String getModelo () {
+    public String getModelo() {
         return modelo;
     }
 
@@ -21,27 +21,27 @@ public class Veiculo {
         this.modelo = novoModelo;
     }
 
-    public int getAno () {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno (int novoAno) {
+    public void setAno(int novoAno) {
         this.ano = novoAno;
     }
 
-    public String getPlaca () {
+    public String getPlaca() {
         return placa;
     }
 
-    public void setPlaca (String novaPlaca) {
+    public void setPlaca(String novaPlaca) {
         this.placa = novaPlaca;
     }
 
-    public int getFrota () {
+    public int getFrota() {
         return frota;
     }
 
-    public void setFrota (int novaFrota) {
+    public void setFrota(int novaFrota) {
         this.frota = novaFrota;
     }
 }

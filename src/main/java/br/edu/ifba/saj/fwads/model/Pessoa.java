@@ -4,11 +4,13 @@ public class Pessoa {
     private String nome;
     private String email;
     private String cpf;
+    private String nascimento;
 
-    public Pessoa(String nome, String email, String cpf) {
+    public Pessoa (String nome, String email, String cpf, String nascimento) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
+        this.nascimento = nascimento;
     }
 
     public String getNome() {
@@ -28,5 +30,11 @@ public class Pessoa {
     }
     public void setCPF(String novoCPF) {
         this.cpf = novoCPF;
+    }
+    public String getNascimento() {
+        return nascimento;
+    }
+    public void setNascimento(String novoNascimento) {
+        this.nascimento = novoNascimento;
     }
 }
