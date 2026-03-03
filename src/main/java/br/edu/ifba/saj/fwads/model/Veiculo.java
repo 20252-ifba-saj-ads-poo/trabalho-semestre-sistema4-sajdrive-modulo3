@@ -16,31 +16,24 @@ public class Veiculo {
     public String getModelo() {
         return modelo;
     }
-
     public void setModelo (String novoModelo) {
         this.modelo = novoModelo;
     }
-
     public int getAno() {
         return ano;
     }
-
     public void setAno(int novoAno) {
         this.ano = novoAno;
     }
-
     public String getPlaca() {
         return placa;
     }
-
     public void setPlaca(String novaPlaca) {
         this.placa = novaPlaca;
     }
-
     public int getFrota() {
         return frota;
     }
-
     public void setFrota(int novaFrota) {
         this.frota = novaFrota;
     }

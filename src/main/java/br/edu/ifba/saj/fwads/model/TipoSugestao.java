@@ -1,0 +1,24 @@
+package br.edu.ifba.saj.fwads.model;
+
+public class TipoSugestao {
+    private int id;
+    private String descricao;
+
+    public TipoSugestao(int id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int novoId) {
+        this.id = novoId;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public void setDescricao(String novaDescricao) {
+        this.descricao = novaDescricao;
+    }
+}

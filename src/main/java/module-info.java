@@ -7,6 +7,4 @@ module br.edu.ifba.saj.fwads {
     
     exports br.edu.ifba.saj.fwads;
     exports br.edu.ifba.saj.fwads.model;
-
-    
 }

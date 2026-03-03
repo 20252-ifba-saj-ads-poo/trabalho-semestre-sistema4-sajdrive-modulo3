@@ -1,26 +1,36 @@
 package br.edu.ifba.saj.fwads.model;
 
+import java.time.LocalDateTime;
+
 public class Comentario {
+    private int id;
     private String feedback;
-    private String data;
+    private LocalDateTime data;
     private Usuario autor;
 
-    public Comentario(String feedback, String data, Usuario autor) {
+    public Comentario(int id, String feedback, LocalDateTime data, Usuario autor) {
+        this.id = id;
         this.feedback = feedback;
         this.data = data;
         this.autor = autor;
     }
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int novoId) {
+        this.id = novoId;
+    }
     public String getFeedback() {
         return feedback;
     }
     public void setFeedback(String novoFeedback) {
         this.feedback = novoFeedback;
     }
-    public String getData() {
+    public LocalDateTime getData() {
         return data;
     }
-    public void setData (String novaData) {
+    public void setData (LocalDateTime novaData) {
         this.data = novaData;
     }
     public Usuario getAutor() {
