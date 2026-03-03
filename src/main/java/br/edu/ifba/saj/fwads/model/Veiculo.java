@@ -4,13 +4,11 @@ public class Veiculo {
     private String modelo;
     private int ano;
     private String placa;
-    private int frota;
 
-    public Veiculo(String modelo, int ano, String placa, int frota) {
+    public Veiculo(String modelo, int ano, String placa) {
         this.modelo = modelo;
         this.ano = ano;
         this.placa = placa;
-        this.frota = frota;
     }
 
     public String getModelo() {
@@ -30,11 +28,5 @@ public class Veiculo {
     }
     public void setPlaca(String novaPlaca) {
         this.placa = novaPlaca;
-    }
-    public int getFrota() {
-        return frota;
-    }
-    public void setFrota(int novaFrota) {
-        this.frota = novaFrota;
     }
 }

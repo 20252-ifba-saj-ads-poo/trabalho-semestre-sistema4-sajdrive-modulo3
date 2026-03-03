@@ -1,15 +1,12 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class TipoProblema {
+public class Categoria {
     private int id;
     private String descricao;
-    
-    private Prioridade prioridade;
 
-    public TipoProblema(int id, String descricao, Prioridade prioridade) {
+    public Categoria(int id, String descricao) {
         this.id = id;
         this.descricao = descricao;
-        this.prioridade = prioridade;
     }
 
     public int getId() {
@@ -23,11 +20,5 @@ public class TipoProblema {
     }
     public void setDescricao(String novaDescricao) {
         this.descricao = novaDescricao;
-    }
-    public Prioridade getPrioridade() {
-        return prioridade;
-    }
-    public void setPrioridade(Prioridade novaPrioridade) {
-        this.prioridade = novaPrioridade;
     }
 }
