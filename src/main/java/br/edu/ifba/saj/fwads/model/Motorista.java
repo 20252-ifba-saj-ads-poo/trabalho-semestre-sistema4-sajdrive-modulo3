@@ -14,5 +14,4 @@ public class Motorista extends Usuario {
     public void setMatricula(String novaMatricula) {
         this.matricula = novaMatricula;
     }
-
 }
