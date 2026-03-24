@@ -1,22 +1,22 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class TipoProblema {
-    private int id;
+public class TipoProblema extends AbstractModel {
     private String descricao;
-    
     private Prioridade prioridade;
+    private boolean exigeVeiculo;
 
-    public TipoProblema(int id, String descricao, Prioridade prioridade) {
-        this.id = id;
+    public TipoProblema(String descricao, Prioridade prioridade, boolean exigeVeiculo) {
+        super();
         this.descricao = descricao;
         this.prioridade = prioridade;
+        this.exigeVeiculo = exigeVeiculo;
     }
 
-    public int getId() {
-        return id;
+    public boolean isExigeVeiculo() {
+        return exigeVeiculo;
     }
-    public void setId(int novoId) {
-        this.id = novoId;
+    public void setExigeVeiculo(boolean novaExigeVeiculo) {
+        this.exigeVeiculo = novaExigeVeiculo;
     }
     public String getDescricao() {
         return descricao;

@@ -6,8 +6,8 @@ public class Sugestao extends Comentario {
     private TipoSugestao tipo;
     private Veiculo veiculo;
 
-    public Sugestao(int id, String feedback, LocalDateTime data, Usuario autor, TipoSugestao tipo, Veiculo veiculo) {
-        super(id, feedback, data, autor);
+    public Sugestao(String feedback, LocalDateTime data, Usuario autor, TipoSugestao tipo, Veiculo veiculo) {
+        super(feedback, data, autor);
         this.tipo = tipo;
         this.veiculo = veiculo;
     }

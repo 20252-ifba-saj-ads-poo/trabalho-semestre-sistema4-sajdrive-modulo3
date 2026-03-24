@@ -6,8 +6,8 @@ public class Avaliacao extends Comentario {
     private Motorista motorista;
     private int nota;
     
-    public Avaliacao(int id, String feedback, LocalDateTime data, Usuario autor, Motorista motorista, int nota) {
-        super(id, feedback, data, autor);
+    public Avaliacao(String feedback, LocalDateTime data, Usuario autor, Motorista motorista, int nota) {
+        super(feedback, data, autor);
         this.motorista = motorista;
         this.nota = nota;
     }

@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.CadAutorController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="610.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.CadastroFeedbackController">
    <children>
-      <TabPane layoutX="10.0" layoutY="14.0" prefHeight="526.0" prefWidth="390.0" style="-fx-background-color: #D7D2C9;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="20.0" tabMinWidth="100.0">
+      <TabPane layoutX="10.0" layoutY="14.0" prefHeight="576.0" prefWidth="595.0" style="-fx-background-color: #D7D2C9;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="20.0" tabMinWidth="100.0">
         <tabs>
-          <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastrar problema">
+          <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastro problema">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="246.0" style="-fx-background-color: #f4f4f4;">
                      <opaqueInsets>
@@ -30,73 +30,186 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <ComboBox layoutX="15.0" layoutY="96.0" prefHeight="26.0" prefWidth="360.0" promptText="Selecione a gravidade" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-background-radius: 3; -fx-border-radius: 3;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="96.0" />
-                        <TextField layoutX="15.0" layoutY="36.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Ar-condicionado quebrado" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <ComboBox fx:id="cbPrioridadeProblema" layoutX="15.0" layoutY="96.0" prefHeight="26.0" prefWidth="360.0" promptText="Selecione a gravidade" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-background-radius: 3; -fx-border-radius: 3;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="96.0" />
+                        <TextField fx:id="txtNomeTipoProblema" layoutX="15.0" layoutY="36.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Ar-condicionado quebrado" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
                         <Label layoutX="15.0" layoutY="72.0" prefHeight="19.0" prefWidth="360.0" text="Prioridade padrão" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="72.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Salvar categoria" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                        <Button fx:id="btnSalvarTipoProblema" onAction="#salvarTipoProblema" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Salvar categoria" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <CheckBox layoutX="15.0" layoutY="137.0" mnemonicParsing="false" style="-fx-text-fill: #7A6D66; -fx-font-weight: bold; -fx-cursor: hand;" text="Exige identificação do veículo?" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="137.0" />
+                        <CheckBox fx:id="chkExigeVeiculoProblema" layoutX="15.0" layoutY="137.0" mnemonicParsing="false" style="-fx-text-fill: #7A6D66; -fx-font-weight: bold; -fx-cursor: hand;" text="Exige identificação do veículo?" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="137.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Sugestões recebidas">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
+            <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastro sugestão">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="522.0" prefWidth="590.0" style="-fx-background-color: #f4f4f4;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                      <children>
-                        <TableView layoutX="10.0" layoutY="14.0" prefHeight="470.0" prefWidth="370.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Tipo de sugestão" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNomeTipoSugestao" layoutX="15.0" layoutY="36.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Melhoria no App" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <Button fx:id="btnSalvarTipoSugestao" onAction="#salvarTipoSugestao" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Salvar categoria" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastro veículo">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+                     <children>
+                        <TableView fx:id="tbVeiculos" layoutX="15.0" layoutY="246.0" prefHeight="256.0" prefWidth="560.0">
+                           <columns>
+                              <TableColumn fx:id="colIdVeiculo" prefWidth="48.000003814697266" text="ID" />
+                              <TableColumn fx:id="colPlacaVeiculo" prefWidth="132.0" text="Placa" />
+                              <TableColumn fx:id="colModeloVeiculo" prefWidth="150.40000915527344" text="Modelo" />
+                              <TableColumn fx:id="colAnoVeiculo" prefWidth="83.20001220703125" text="Ano" />
+                              <TableColumn fx:id="colCapacidadeVeiculo" prefWidth="146.40008544921875" text="Capacidade" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Placa" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPlacaVeiculo" layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: ABC-1234" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <Button fx:id="btnSalvarVeiculo" onAction="#salvarVeiculo" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Salvar veículo" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="69.0" prefHeight="20.0" prefWidth="360.0" text="Modelo" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="69.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtModeloVeiculo" layoutX="15.2" layoutY="91.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Honda Civic" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0" />
+                        <Label layoutX="15.0" layoutY="127.0" prefHeight="20.0" prefWidth="360.0" text="Ano" textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAnoVeiculo" layoutX="16.0" layoutY="149.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 2018" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="149.0" />
+                        <Label layoutX="16.0" layoutY="184.0" prefHeight="20.0" prefWidth="360.0" text="Capacidade" textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCapacidadeVeiculo" layoutX="17.0" layoutY="206.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 4 passageiros" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="206.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastro passageiro">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+                     <children>
+                        <TableView fx:id="tbPassageiros" layoutX="16.0" layoutY="246.0" prefHeight="256.0" prefWidth="560.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="246.0">
                           <columns>
-                            <TableColumn prefWidth="46.40002250671387" text="ID" />
-                            <TableColumn prefWidth="88.00000762939453" text="Tipo" />
-                              <TableColumn prefWidth="76.79998779296875" text="Veículo" />
-                              <TableColumn prefWidth="147.0" text="Texto da sugestão" />
+                            <TableColumn fx:id="colIdPassageiro" prefWidth="36.79998701810837" text="ID" />
+                            <TableColumn fx:id="colNomePassageiro" prefWidth="137.59998321533203" text="Nome" />
+                              <TableColumn fx:id="colCpfPassageiro" prefWidth="73.5999755859375" text="CPF" />
+                              <TableColumn fx:id="colNascimentoPassageiro" prefWidth="113.59996032714844" text="Nascimento" />
+                              <TableColumn fx:id="colEmailPassageiro" prefWidth="203.20001220703125" text="Email" />
                           </columns>
                         </TableView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastrar motorista">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
-                     <children>
                         <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
-                           </font></Label>
-                        <TextField layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Motorista João" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
-                        <TableView layoutX="15.0" layoutY="193.0" prefHeight="257.0" prefWidth="360.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
-                          <columns>
-                            <TableColumn prefWidth="47.20001029968262" text="ID" />
-                            <TableColumn prefWidth="92.79999542236328" text="Nome" />
-                              <TableColumn prefWidth="85.5999755859375" text="Matrícula" />
-                              <TableColumn prefWidth="132.00006103515625" text="Veículo" />
-                          </columns>
-                        </TableView>
-                        <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Salvar motorista" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNomePassageiro" layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Erik Amorim" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <Button fx:id="btnSalvarPassageiro" onAction="#salvarPassageiro" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Salvar motorista" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Label layoutX="14.0" layoutY="69.0" prefHeight="20.0" prefWidth="360.0" text="Matrícula" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="69.0">
+                        <Label layoutX="14.0" layoutY="69.0" prefHeight="20.0" prefWidth="360.0" text="CPF" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="69.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="15.2" layoutY="91.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 12345" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0" />
-                        <Label layoutX="14.0" layoutY="126.0" prefHeight="20.0" prefWidth="360.0" text="Placa do veículo utilizado" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="126.0">
+                        <TextField fx:id="txtCpfPassageiro" layoutX="15.2" layoutY="91.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 123.456.789-10" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0" />
+                        <Label layoutX="15.0" layoutY="127.0" prefHeight="20.0" prefWidth="360.0" text="Data de nascimento" textFill="#7a6d66">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="151.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: ABC-1234" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="151.0" />
+                        <TextField fx:id="txtNascimentoPassageiro" layoutX="16.0" layoutY="149.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 17/05/2003" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="149.0" />
+                        <Label layoutX="16.0" layoutY="184.0" prefHeight="20.0" prefWidth="360.0" text="E-mail" textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmailPassageiro" layoutX="17.0" layoutY="207.2" prefHeight="27.0" prefWidth="560.0" promptText="Ex: trabalhopoo@ifba.edu.br" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="207.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #ffffff; -fx-focus-color: transparent;" text="Cadastro motorista">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+                     <children>
+                        <TableView fx:id="tbMotoristas" layoutX="15.2" layoutY="306.4" prefHeight="196.0" prefWidth="565.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="306.0">
+                           <columns>
+                              <TableColumn fx:id="colIdMotorista" prefWidth="36.79998701810837" text="ID" />
+                              <TableColumn fx:id="colNomeMotorista" prefWidth="137.59998321533203" text="Nome" />
+                              <TableColumn fx:id="colCpfMotorista" prefWidth="73.5999755859375" text="CPF" />
+                              <TableColumn fx:id="colNascimentoMotorista" prefWidth="90.39994812011719" text="Nascimento" />
+                              <TableColumn fx:id="colMatriculaMotorista" prefWidth="75.0" text="Matrícula" />
+                              <TableColumn fx:id="colEmailMotorista" prefWidth="150.4000366210937" text="Email" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="360.0" text="Nome" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNomeMotorista" layoutX="14.0" layoutY="37.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: Erik Amorim" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="35.0" />
+                        <Button fx:id="btnSalvarMotorista" onAction="#salvarMotorista" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Salvar motorista" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="69.0" prefHeight="20.0" prefWidth="360.0" text="CPF" textFill="#7a6d66" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="69.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCpfMotorista" layoutX="15.2" layoutY="91.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 123.456.789-10" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0" />
+                        <Label layoutX="15.0" layoutY="127.0" prefHeight="20.0" prefWidth="360.0" text="Data de nascimento" textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNascimentoMotorista" layoutX="16.0" layoutY="149.0" prefHeight="27.0" prefWidth="360.0" promptText="Ex: 17/05/2003" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="149.0" />
+                        <Label layoutX="16.0" layoutY="184.0" prefHeight="20.0" prefWidth="360.0" text="E-mail" textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmailMotorista" layoutX="17.0" layoutY="207.2" prefHeight="27.0" prefWidth="560.0" promptText="Ex: trabalhopoo@ifba.edu.br" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="207.0" />
+                        <Label layoutX="17.0" layoutY="246.0" prefHeight="20.0" prefWidth="360.0" text="Matrícula " textFill="#7a6d66">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtMatriculaMotorista" layoutX="18.0" layoutY="270.0" prefHeight="27.0" prefWidth="560.0" promptText="Ex: MAT-001" style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" />
                      </children>
                   </AnchorPane>
                </content>

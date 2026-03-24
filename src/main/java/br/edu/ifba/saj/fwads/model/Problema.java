@@ -7,8 +7,8 @@ public class Problema extends Comentario {
     private Motorista motorista;
     private Veiculo veiculo;
 
-    public Problema(int id, String feedback, LocalDateTime data, Usuario autor, TipoProblema tipo, Motorista motorista, Veiculo veiculo) {
-        super(id, feedback, data, autor);
+    public Problema(String feedback, LocalDateTime data, Usuario autor, TipoProblema tipo, Motorista motorista, Veiculo veiculo) {
+        super(feedback, data, autor);
         this.tipo = tipo;
         this.motorista = motorista;
         this.veiculo = veiculo;

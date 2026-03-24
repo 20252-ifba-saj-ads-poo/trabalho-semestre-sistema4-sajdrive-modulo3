@@ -1,26 +1,19 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class Usuario {
-    private int id;
+public class Usuario extends AbstractModel {
     private String nome;
     private String email;
     private String cpf;
     private String nascimento;
 
-    public Usuario(int id, String nome, String email, String cpf, String nascimento) {
-        this.id = id; 
+    public Usuario(String nome, String email, String cpf, String nascimento) {
+        super();
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
         this.nascimento = nascimento;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int novoId) {
-        this.id = novoId;
-    }
     public String getNome() {
         return nome;
     }

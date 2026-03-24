@@ -2,8 +2,7 @@ package br.edu.ifba.saj.fwads.model;
 
 import java.time.LocalDateTime;
 
-public class Viagem {
-    private int id;
+public class Viagem extends AbstractModel {
     private Motorista motorista;
     private Passageiro passageiro;
     private Veiculo veiculo;
@@ -11,8 +10,8 @@ public class Viagem {
     private String destino;
     private LocalDateTime data;
 
-    public Viagem(int id, Motorista motorista, Passageiro passageiro, Veiculo veiculo, String origem, String destino, LocalDateTime data) {
-        this.id = id;
+    public Viagem(Motorista motorista, Passageiro passageiro, Veiculo veiculo, String origem, String destino, LocalDateTime data) {
+        super();
         this.motorista = motorista;
         this.passageiro = passageiro;
         this.veiculo = veiculo;
@@ -21,12 +20,6 @@ public class Viagem {
         this.data = data;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int novoId) {
-        this.id = novoId;
-    }
     public Motorista getMotorista() {
         return motorista;
     }

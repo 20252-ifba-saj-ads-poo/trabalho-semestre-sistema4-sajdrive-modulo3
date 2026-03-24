@@ -1,16 +1,16 @@
 package br.edu.ifba.saj.fwads.model;
 
 public class Passageiro extends Usuario {
-    private Categoria categoria;
+    private TipoPassageiro tipo;
 
-    public Passageiro(int id, String nome, String email, String cpf, String nascimento, Categoria categoria) {
-        super(id, nome, email, cpf, nascimento);
-        this.categoria = categoria;
+    public Passageiro(String nome, String email, String cpf, String nascimento, TipoPassageiro tipo) {
+        super(nome, email, cpf, nascimento);
+        this.tipo = tipo;
     }
-    public Categoria getCategoria() {
-        return categoria;
+    public TipoPassageiro getTipo() {
+        return tipo;
     }
-    public void setCategoria(Categoria novaCategoria) {
-        this.categoria = novaCategoria;
+    public void setTipo(TipoPassageiro novoTipo) {
+        this.tipo = novoTipo;
     }
 }

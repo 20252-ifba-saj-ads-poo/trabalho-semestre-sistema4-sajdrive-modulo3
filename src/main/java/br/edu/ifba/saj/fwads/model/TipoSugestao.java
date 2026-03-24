@@ -1,20 +1,13 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class TipoSugestao {
-    private int id;
+public class TipoSugestao extends AbstractModel {
     private String descricao;
 
-    public TipoSugestao(int id, String descricao) {
-        this.id = id;
+    public TipoSugestao(String descricao) {
+        super();
         this.descricao = descricao;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int novoId) {
-        this.id = novoId;
-    }
     public String getDescricao() {
         return descricao;
     }

@@ -2,25 +2,18 @@ package br.edu.ifba.saj.fwads.model;
 
 import java.time.LocalDateTime;
 
-public class Comentario {
-    private int id;
+public class Comentario extends AbstractModel {
     private String feedback;
     private LocalDateTime data;
     private Usuario autor;
 
-    public Comentario(int id, String feedback, LocalDateTime data, Usuario autor) {
-        this.id = id;
+    public Comentario(String feedback, LocalDateTime data, Usuario autor) {
+        super();
         this.feedback = feedback;
         this.data = data;
         this.autor = autor;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int novoId) {
-        this.id = novoId;
-    }
     public String getFeedback() {
         return feedback;
     }
