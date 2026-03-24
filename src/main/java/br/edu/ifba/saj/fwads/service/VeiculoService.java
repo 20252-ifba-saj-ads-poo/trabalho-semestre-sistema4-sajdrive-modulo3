@@ -1,8 +1,9 @@
 package br.edu.ifba.saj.fwads.service;
 
+import br.edu.ifba.saj.fwads.model.Avaliacao;
 import br.edu.ifba.saj.fwads.model.Veiculo;
 import br.edu.ifba.saj.fwads.repository.RepositorioGenerico;
-import java.util.ArrayList;
+import java.util.List;
 
 public class VeiculoService {
 
@@ -22,8 +23,7 @@ public class VeiculoService {
     public void remover(String id) {
         this.repositorio.remover(id);
     }
-
-    public ArrayList<Veiculo> listarTodos() {
-        return this.repositorio.listarTodos();
+    public List<Veiculo> listarTodos() {
+    return this.repositorio.listarTodos();
     }
 }

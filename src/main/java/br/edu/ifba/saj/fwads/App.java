@@ -15,33 +15,33 @@ public class App extends Application {
     private static Scene scene;    
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("controller/Feedback.fxml"));
-        scene = new Scene(loader.load(), 800, 600);
-        stage.setScene(scene);
-        stage.show();
+public void start(Stage stage) throws IOException {
+    FXMLLoader loader = new FXMLLoader(App.class.getResource("controller/RealizarFeedback.fxml"));
+    scene = new Scene(loader.load(), 800, 600);
+    stage.setScene(scene);
+    stage.show();
     }
 
-    public static void setRoot(String fxml) {
-        try {
-            scene.setRoot(loadFXML(fxml));
-        } catch (Exception e) {
-            new Alert(AlertType.ERROR, "Erro ao carregar o arquivo " + fxml).show();
-            e.printStackTrace();
-        }
+public static void setRoot(String fxml) {
+    try {
+        scene.setRoot(loadFXML(fxml));
+    } catch (Exception e) {
+        new Alert(AlertType.ERROR, "Erro ao carregar o arquivo " + fxml).show();
+        e.printStackTrace();
+    }
     }
 
-    private static Parent loadFXML(String fxml) throws Exception {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
-        Parent parent = loader.load();
-        Object controller =loader.getController();
-        if(controller!= null){
-            parent.getProperties().put("controller", loader.getController());
-        }
-        return parent;
+private static Parent loadFXML(String fxml) throws Exception {
+    FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
+    Parent parent = loader.load();
+    Object controller =loader.getController();
+    if(controller!= null){
+        parent.getProperties().put("controller", loader.getController());
+    }
+    return parent;
     }
 
-    public static void main(String[] args) {
-        launch();
+public static void main(String[] args) {
+    launch();
     }
 }

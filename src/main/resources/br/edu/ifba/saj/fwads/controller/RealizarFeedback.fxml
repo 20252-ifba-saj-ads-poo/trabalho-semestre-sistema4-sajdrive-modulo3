@@ -37,7 +37,7 @@
                            </font>
                         </Label>
                         <TextArea fx:id="taDescricaoProblema" layoutX="15.2" layoutY="154.6" prefHeight="260.0" prefWidth="360.0" promptText="Descreva detalhadamente o problema que você deseja reportar." style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #D7D2C9;" wrapText="true" AnchorPane.leftAnchor="15.2" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="154.6" />
-                        <Button fx:id="btnReportarProblema" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Reportar" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
+                        <Button fx:id="btnReportarProblema" onAction="#reportarProblema" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-background-radius: 5; -fx-font-weight: bold;" text="Reportar" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -74,7 +74,7 @@
                            </font></Label>
                         <TextArea fx:id="taDescricaoSugestao" layoutX="15.2" layoutY="170.6" prefHeight="260.0" prefWidth="360.0" promptText="Descreva sua ideia para que possamos melhorar." style="-fx-border-color: #D7D2C9; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="170.6" />
                         <ComboBox fx:id="cbVeiculoSugestao" layoutX="15.0" layoutY="111.0" prefHeight="27.0" prefWidth="360.0" promptText="Selecione se necessário" style="-fx-background-color: #ffffff; -fx-border-color: #D7D2C9; -fx-border-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="111.0" />
-                        <Button fx:id="btnEnviarSugestao" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar sugestão" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
+                        <Button fx:id="btnEnviarSugestao" onAction="#enviarSugestao" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar sugestão" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -109,7 +109,7 @@
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <Button fx:id="btnEnviarAvaliacao" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar avaliação" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
+                        <Button fx:id="btnEnviarAvaliacao" onAction="#enviarAvaliacao" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #6A2875; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Enviar avaliação" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="8.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
