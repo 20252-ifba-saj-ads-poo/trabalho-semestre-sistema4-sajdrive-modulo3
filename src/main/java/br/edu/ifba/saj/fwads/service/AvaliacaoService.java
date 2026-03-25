@@ -30,6 +30,6 @@ public class AvaliacaoService {
     }
  
     public List<Avaliacao> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }

@@ -25,6 +25,6 @@ public class VeiculoService {
     }
  
     public List<Veiculo> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }

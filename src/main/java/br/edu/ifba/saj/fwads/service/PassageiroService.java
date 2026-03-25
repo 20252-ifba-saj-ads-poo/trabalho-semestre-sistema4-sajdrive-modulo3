@@ -29,6 +29,6 @@ public class PassageiroService {
     }
  
     public List<Passageiro> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }

@@ -29,6 +29,6 @@ public class SugestaoService {
     }
  
     public List<Sugestao> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }

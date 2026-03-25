@@ -25,6 +25,6 @@ public class TipoProblemaService {
     }
  
     public List<TipoProblema> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }

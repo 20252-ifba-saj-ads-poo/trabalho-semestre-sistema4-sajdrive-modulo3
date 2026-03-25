@@ -25,6 +25,6 @@ public class TipoSugestaoService {
     }
  
     public List<TipoSugestao> listarTodos() {
-        return this.repositorio.listarTodos();
+        return this.repositorio.buscarTodos();
     }
 }
