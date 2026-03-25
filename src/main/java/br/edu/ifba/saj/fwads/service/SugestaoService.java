@@ -1,5 +1,6 @@
 package br.edu.ifba.saj.fwads.service;
  
+import br.edu.ifba.saj.fwads.model.Avaliacao;
 import br.edu.ifba.saj.fwads.model.Sugestao;
 import br.edu.ifba.saj.fwads.repository.RepositorioGenerico;
 import java.util.List;
@@ -28,7 +29,7 @@ public class SugestaoService {
         this.repositorio.remover(id);
     }
  
-    public List<Sugestao> listarTodos() {
+    public List<Sugestao> buscarTodos() {
         return this.repositorio.buscarTodos();
     }
 }

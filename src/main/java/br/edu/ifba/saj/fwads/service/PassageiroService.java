@@ -1,5 +1,6 @@
 package br.edu.ifba.saj.fwads.service;
  
+import br.edu.ifba.saj.fwads.model.Avaliacao;
 import br.edu.ifba.saj.fwads.model.Passageiro;
 import br.edu.ifba.saj.fwads.repository.RepositorioGenerico;
 import java.util.List;
@@ -28,7 +29,7 @@ public class PassageiroService {
         this.repositorio.remover(id);
     }
  
-    public List<Passageiro> listarTodos() {
+    public List<Passageiro> buscarTodos() {
         return this.repositorio.buscarTodos();
     }
 }

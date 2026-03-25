@@ -29,7 +29,7 @@ public class AvaliacaoService {
         this.repositorio.remover(id);
     }
  
-    public List<Avaliacao> listarTodos() {
+    public List<Avaliacao> buscarTodos() {
         return this.repositorio.buscarTodos();
     }
 }
