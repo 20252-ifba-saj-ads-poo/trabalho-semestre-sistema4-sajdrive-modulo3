@@ -17,7 +17,7 @@ public class App extends Application {
     @Override
 public void start(Stage stage) throws IOException {
     // Para carregar a tela inicial do aplicativo
-    FXMLLoader loader = new FXMLLoader(App.class.getResource("/br/edu/ifba/saj/fwads/controller/RealizarFeedback.fxml"));
+    FXMLLoader loader = new FXMLLoader(App.class.getResource("controller/RealizarFeedback.fxml"));
     scene = new Scene(loader.load(), 800, 600);
     stage.setScene(scene);
     stage.show();
