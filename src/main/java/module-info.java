@@ -1,7 +1,7 @@
 module br.edu.ifba.saj.fwads {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.graphics;
+    requires transitive javafx.graphics;
  
     opens br.edu.ifba.saj.fwads to javafx.graphics;
     opens br.edu.ifba.saj.fwads.controller to javafx.fxml;
