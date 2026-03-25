@@ -1,6 +1,6 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class TipoSugestao extends AbstractModel {
+public class TipoSugestao extends AbstractModel<String> {
     private String descricao;
 
     public TipoSugestao(String descricao) {
@@ -11,6 +11,7 @@ public class TipoSugestao extends AbstractModel {
     public String getDescricao() {
         return descricao;
     }
+
     public void setDescricao(String novaDescricao) {
         this.descricao = novaDescricao;
     }

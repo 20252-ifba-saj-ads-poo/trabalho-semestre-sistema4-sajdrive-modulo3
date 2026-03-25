@@ -7,9 +7,11 @@ public class Passageiro extends Usuario {
         super(nome, email, cpf, nascimento);
         this.tipo = tipo;
     }
+
     public TipoPassageiro getTipo() {
         return tipo;
     }
+
     public void setTipo(TipoPassageiro novoTipo) {
         this.tipo = novoTipo;
     }

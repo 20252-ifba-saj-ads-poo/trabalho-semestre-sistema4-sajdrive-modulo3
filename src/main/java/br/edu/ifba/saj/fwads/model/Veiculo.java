@@ -1,6 +1,6 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class Veiculo extends AbstractModel {
+public class Veiculo extends AbstractModel<String> {
     private String modelo;
     private int ano;
     private String placa;
@@ -17,24 +17,31 @@ public class Veiculo extends AbstractModel {
     public String getModelo() {
         return modelo;
     }
+
     public void setModelo (String novoModelo) {
         this.modelo = novoModelo;
     }
+
     public int getAno() {
         return ano;
     }
+
     public void setAno(int novoAno) {
         this.ano = novoAno;
     }
+
     public String getPlaca() {
         return placa;
     }
+
     public void setPlaca(String novaPlaca) {
         this.placa = novaPlaca;
     }
+
     public int getCapacidade() {
         return capacidade;
     }
+
     public void setCapacidade(int novaCapacidade) {
         this.capacidade = novaCapacidade;
     }

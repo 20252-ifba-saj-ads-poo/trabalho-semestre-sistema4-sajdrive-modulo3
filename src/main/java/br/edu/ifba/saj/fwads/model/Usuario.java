@@ -1,6 +1,6 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class Usuario extends AbstractModel {
+public class Usuario extends AbstractModel<String> {
     private String nome;
     private String email;
     private String cpf;
@@ -17,24 +17,31 @@ public class Usuario extends AbstractModel {
     public String getNome() {
         return nome;
     }
+
     public void setNome(String novoNome) {
         this.nome = novoNome;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String novoEmail) {
         this.email = novoEmail;
     }
+
     public String getCPF() {
         return cpf;
     }
+
     public void setCPF(String novoCPF) {
         this.cpf = novoCPF;
     }
+
     public String getNascimento() {
         return nascimento;
     }
+
     public void setNascimento(String novoNascimento) {
         this.nascimento = novoNascimento;
     }

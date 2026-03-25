@@ -15,12 +15,15 @@ public class Sugestao extends Comentario {
     public TipoSugestao getTipo() {
         return tipo;
     }
+
     public void setTipo(TipoSugestao novoTipo) {
         this.tipo = novoTipo;
     }
+
     public Veiculo getVeiculo() {
         return veiculo;
     }
+
     public void setVeiculo(Veiculo novoVeiculo) {
         this.veiculo = novoVeiculo;
     }

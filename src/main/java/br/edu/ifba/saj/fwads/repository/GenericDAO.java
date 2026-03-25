@@ -1,11 +1,12 @@
 package br.edu.ifba.saj.fwads.repository;
-
+ 
+import br.edu.ifba.saj.fwads.model.AbstractModel;
 import java.util.List;
-
-public interface GenericDAO<T, ID> {
-    void salvar(T entidade);
+ 
+public interface GenericDAO<T extends AbstractModel<ID>, ID> {
+    ID salvar(T entidade);
     void atualizar(T entidade);
     T buscarPorId(ID id);
-    void remover(ID id);
-    List<T> listarTodos();
+    void deletar(ID id);
+    List<T> buscarTodos();
 }

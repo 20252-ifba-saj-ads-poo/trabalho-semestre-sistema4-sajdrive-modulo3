@@ -17,18 +17,23 @@ public class Problema extends Comentario {
     public TipoProblema getTipo() {
         return tipo;
     }
+
     public void setTipo(TipoProblema novoTipo) {
         this.tipo = novoTipo;
     }
+
     public Motorista getMotorista() {
         return motorista;
     }
+
     public void setMotorista(Motorista novoMotorista) {
         this.motorista = novoMotorista;
     }
+
     public Veiculo getVeiculo() {
         return veiculo;
     }
+
     public void setVeiculo(Veiculo novoVeiculo) {
         this.veiculo = novoVeiculo;
     }
