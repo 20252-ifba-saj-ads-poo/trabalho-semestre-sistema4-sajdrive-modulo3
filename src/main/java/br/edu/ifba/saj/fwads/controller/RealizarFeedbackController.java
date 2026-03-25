@@ -69,16 +69,16 @@ public class RealizarFeedbackController {
 public void initialize() {
     // Preenche os ComboBoxes com dados do sistema
     cbMotorista.setItems(FXCollections.observableArrayList(
-        Biblioteca.motoristaService.listarTodos()
+        Biblioteca.motoristaService.buscarTodos()
     ));
     cbTipoProblema.setItems(FXCollections.observableArrayList(
-        Biblioteca.tipoProblemaService.listarTodos()
+        Biblioteca.tipoProblemaService.buscarTodos()
     ));
     cbVeiculoProblema.setItems(FXCollections.observableArrayList(
-        Biblioteca.veiculoService.listarTodos()
+        Biblioteca.veiculoService.buscarTodos()
     ));
     cbVeiculoSugestao.setItems(FXCollections.observableArrayList(
-        Biblioteca.veiculoService.listarTodos()
+        Biblioteca.veiculoService.buscarTodos()
     ));
 
     // Para mostrar o nome do motorista no ComboBox
@@ -166,8 +166,8 @@ public void enviarSugestao() {
     Veiculo veiculo = cbVeiculoSugestao.getValue();
     String descricao = taDescricaoSugestao.getText();
     TipoSugestao tipo = rbAplicativo.isSelected() ?
-        Biblioteca.tipoSugestaoService.listarTodos().get(0) :
-        Biblioteca.tipoSugestaoService.listarTodos().get(1);
+        Biblioteca.tipoSugestaoService.buscarTodos().get(0) :
+        Biblioteca.tipoSugestaoService.buscarTodos().get(1);
 
     // Para criar o objeto e salvar
     Sugestao sugestao = new Sugestao(descricao, LocalDateTime.now(), null, tipo, veiculo);

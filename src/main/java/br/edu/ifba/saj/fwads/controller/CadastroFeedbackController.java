@@ -173,7 +173,7 @@ public void initialize() {
 
     // Para mostrar os motoristas na tabela
     ObservableList<Motorista> motoristas = FXCollections.observableArrayList(
-        Biblioteca.motoristaService.listarTodos()
+        Biblioteca.motoristaService.buscarTodos()
     );
     tbMotoristas.setItems(motoristas);
 
@@ -196,7 +196,7 @@ public void initialize() {
 
     // Para mostrar os passageiros na tabela
     ObservableList<Passageiro> passageiros = FXCollections.observableArrayList(
-        Biblioteca.passageiroService.listarTodos()
+        Biblioteca.passageiroService.buscarTodos()
     );
     tbPassageiros.setItems(passageiros);
 
@@ -219,7 +219,7 @@ public void initialize() {
 
     // Para mostrar os veículos na tabela
     ObservableList<Veiculo> veiculos = FXCollections.observableArrayList(
-        Biblioteca.veiculoService.listarTodos()
+        Biblioteca.veiculoService.buscarTodos()
     );
     tbVeiculos.setItems(veiculos);  
     }
@@ -240,7 +240,7 @@ public void salvarMotorista() {
 
         // Para atualizar a tabela
         tbMotoristas.setItems(FXCollections.observableArrayList(
-            Biblioteca.motoristaService.listarTodos()
+            Biblioteca.motoristaService.buscarTodos()
         ));
 
         // Para limpar os campos
@@ -275,7 +275,7 @@ public void salvarPassageiro() {
 
         // Para atualizar a tabela
         tbPassageiros.setItems(FXCollections.observableArrayList(
-            Biblioteca.passageiroService.listarTodos()
+            Biblioteca.passageiroService.buscarTodos()
         ));
 
         // Para limpar os campos
@@ -309,7 +309,7 @@ public void salvarVeiculo() {
 
         // Para atualizar a tabela
         tbVeiculos.setItems(FXCollections.observableArrayList(
-            Biblioteca.veiculoService.listarTodos()
+            Biblioteca.veiculoService.buscarTodos()
         ));
 
         // Para limpar os campos
